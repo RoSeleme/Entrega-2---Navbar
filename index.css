@@ -2,37 +2,61 @@
     padding: 0;
     margin: 0;
     font-family: 'Karla', sans-serif;
+    color: chocolate;
 }
 
 
  a {
     text-decoration: none;
-    color: chocolate;
 }
 
 
-.header {
+header {
 
-    height: 16vh;
+    height: 12%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: blanchedalmond;
-    flex-direction: row;
+    background-color: #f6dbc6;
+    
 }
 
-@media (max-width: 1200px){
 
-    .header {
+
+@media (max-width: 800px ){
+    
+    * {
+        font-size: 9px;
+    }
+    header {
+        width: 100%;    
+        flex-direction: column;
+        height: 63%;
+        
+    }
+
+    .list-nav{
+        flex-direction: column;
+    }
+    
+    .logo {
+        width: 10em;
+        height: 10em;
+        flex-direction: column;
+        
+    }
+
+    .rectangulo {
         width: 100%;
         flex-direction: column;
         height: 50%;
     }
+}
 
-    .list-nav{
-
-        flex-direction: column;
-
+@media (min-width: 801px) {
+    .cards {
+        font-size: 14.2px;
     }
 }
 
@@ -40,9 +64,9 @@
 
 .logo {
 
-    width: 75px;
-    height: 75px;
+    height: 90%;
     border-radius: 90px;
+    
 }
 
 
@@ -51,6 +75,7 @@
     list-style: none;
     display: flex;
     gap: 50px;
+    align-self: center;
    
 }
 
@@ -77,6 +102,157 @@
     background: url(./Imagenes/img\ de\ fondo.jpg);
     opacity: 0.2;
     width: 100%;
-    height: 700px;
+    height: 100%;
 }
+
+
+.ventajas {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    height: 70%;
+    background-color: #f6d0c6;
+    flex-direction: column;
+} 
+
+
+
+.cuadrados {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    justify-content: space-around;
+}
+
+.cards {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 25%;
+    height: 80%;
+    margin: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-left-radius: 1em;
+}
+
+h3 {
+    margin: 2em;
+}
+
+p{
+    width: 80%;
+}
+
+.margin-top {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #ac928b;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.natura-arg {
+    width: 65%;
+    height: 100%;
+    /* background-color: chocolate; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.iconos-contacto {
+    width: 35%;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   
+}
+
+
+
+.color {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.icono-facebook {
+    margin-right: 2em;
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.icono-instagram {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+@keyframes rotar-tarjeta {
+    0% {
+        transform: rotateY(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animacion-tarjeta {
+    animation-name: rotar-tarjeta;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes agrandar-hoja {
+    0% {
+        transform: scale(2.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.animacion-hoja {
+    animation-name: agrandar-hoja;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes trasladar-camion {
+    0% {
+        transform: translateX(20px);
+    }
+
+    50% {
+        transform: translateX(60px);
+    }
+
+    100% {
+        transform: translateX(10px) translateY(0px);
+    }
+}
+.animacion-camion {
+    animation-name: trasladar-camion;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
 
